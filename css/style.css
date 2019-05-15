@@ -6,6 +6,7 @@
   width: 90%; }
 
 body {
+  font-family: 'Bree Serif', serif;
   margin: 0px; }
   body header {
     width: 100%;
@@ -15,6 +16,59 @@ body {
     left: 0;
     border: 4px solid #9900CC;
     height: 55px; }
+    body header .container {
+      height: 55px; }
+      body header .container .leftheader, body header .container .rightheader {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        height: 55px; }
+      body header .container .leftheader {
+        width: 60%;
+        float: left; }
+      body header .container .rightheader {
+        width: 40%;
+        float: right;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        -webkit-justify-content: flex-end;
+        -moz-justify-content: flex-end;
+        justify-content: flex-end; }
+      body header .container nav {
+        margin-left: 50px;
+        height: 100%; }
+        body header .container nav a {
+          color: #fff;
+          text-decoration: none;
+          text-transform: uppercase;
+          padding: 0px 15px;
+          display: -webkit-inline-box;
+          display: -webkit-inline-flex;
+          display: -moz-inline-flex;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          align-items: center;
+          height: 55px; }
+          body header .container nav a:hover, body header .container nav a:active {
+            background-color: #080808; }
+      body header .container .phone, body header .container .directions {
+        margin: 0px 8px; }
+        body header .container .phone a, body header .container .directions a {
+          color: #fff;
+          text-decoration: none; }
+          body header .container .phone a:hover, body header .container .directions a:hover {
+            text-decoration: underline; }
   body .heroimage {
     background: url(../images/bannerphotos.jpg);
     background-size: cover;
@@ -25,20 +79,17 @@ body {
     body .heroimage .herooverlay {
       width: 100%;
       height: 100%;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      align-items: center; }
+      background: rgba(11, 11, 11, 0.6); }
       body .heroimage .herooverlay .overlaybox {
         width: 65%;
         margin: 0 auto;
-        background: rgba(11, 11, 11, 0.8);
         color: #fff;
         text-align: center;
-        padding: 5%; }
+        padding: 2%; }
+        body .heroimage .herooverlay .overlaybox h2 {
+          font-size: 45px;
+          margin-top: 0px; }
+        body .heroimage .herooverlay .overlaybox h3 {
+          font-size: 22px; }
+        body .heroimage .herooverlay .overlaybox img {
+          width: 60%; }

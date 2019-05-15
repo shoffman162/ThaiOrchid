@@ -2,32 +2,8 @@
 $primary: #212121;
 $secondary: #9900CC;
 
-//GLOBAL MIXINS
-@mixin flexbox {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-%flexbox { @include flexbox; }
-
-@mixin align-items($value: stretch) {
-	@if $value == flex-start {
-		-webkit-box-align: start;
-		-ms-flex-align: start;
-	} @else if $value == flex-end {
-		-webkit-box-align: end;
-		-ms-flex-align: end;
-	} @else {
-		-webkit-box-align: $value;
-		-ms-flex-align: $value;
-	}
-	-webkit-align-items: $value;
-	-moz-align-items: $value;
-	align-items: $value;
-}
+//IMPORT MIXINS
+@import "flexbox";
 
 .container{
     margin: 0 auto;
@@ -38,6 +14,7 @@ $secondary: #9900CC;
 }
 
 body{
+    font-family: 'Bree Serif', serif;
     margin:0px;
     header{
         width:100%;
@@ -47,6 +24,49 @@ body{
         left:0;
         border:4px solid $secondary;
         height:55px;
+        .container{
+            height:55px;
+            .leftheader,.rightheader{
+                    @include flexbox;
+                @include align-items(center);
+                height:55px;
+            }
+            .leftheader{
+                width:60%;
+                float:left;
+            }
+            .rightheader{
+                width:40%;
+                float:right;
+                @include justify-content(flex-end);
+            }
+             nav{
+                 margin-left:50px;
+                 height:100%;
+                 a{
+                    color:#fff;
+                    text-decoration:none;
+                     text-transform:uppercase;
+                     padding:0px 15px;
+                     @include inline-flex;
+                     @include align-items(center);
+                     height:55px;
+                     &:hover,&:active{
+                        background-color:#080808;
+                     }
+                 }
+             }
+            .phone,.directions{
+                margin:0px 8px;
+                a{
+                    color:#fff;
+                    text-decoration:none;
+                    &:hover{
+                        text-decoration:underline;
+                    }
+                }
+            }
+        }
     }
     .heroimage{
         background: url(../images/bannerphotos.jpg);
@@ -58,15 +78,23 @@ body{
             .herooverlay{
                 width:100%;
                 height:100%;
-                @include flexbox;
-                @include align-items(center);
+                background:rgba(11, 11, 11, 0.6);
                 .overlaybox{
                     width:65%;
                     margin:0 auto;
-                    background:rgba(11, 11, 11, 0.8);
                     color:#fff;
                     text-align:center;
-                    padding:5%;
+                    padding:2%;
+                    h2{
+                        font-size:45px;
+                        margin-top:0px;
+                    }
+                    h3{
+                        font-size:22px;
+                    }
+                    img{
+                        width:60%;
+                    }
                  }
             }
     }
