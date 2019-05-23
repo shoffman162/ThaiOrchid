@@ -93,3 +93,48 @@ body {
           font-size: 22px; }
         body .heroimage .herooverlay .overlaybox img {
           width: 60%; }
+  body .menu {
+    padding: 50px 0px; }
+    body .menu .container img {
+      width: 100%; }
+  body .order {
+    background: #212121;
+    padding: 50px 0px;
+    color: #fff;
+    text-align: center; }
+    body .order .flex {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      body .order .flex .form {
+        width: 40%;
+        padding-left: 15px;
+        padding-right: 15px; }
+        body .order .flex .form form {
+          background: #EEEEEE; }
+        body .order .flex .form h3 {
+          font-size: 29px;
+          margin: 0px; }
+        body .order .flex .form h4 {
+          font-size: 18px;
+          margin-top: 0px; }
+      body .order .flex .divider {
+        width: 20%; }
+        body .order .flex .divider h3 {
+          font-size: 29px;
+          margin-top: 0px; }
+      body .order .flex .map {
+        width: 40%;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center; }
+        body .order .flex .map h3 {
+          font-size: 29px;
+          margin-top: 0px; }
+  body footer {
+    background: #212121;
+    text-align: center;
+    color: #fff;
+    font-size: 14px; }
